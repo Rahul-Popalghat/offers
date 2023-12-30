@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deals and Coupons</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .deal-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 10px;
+            width: 300px;
+            padding: 20px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .deal-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .deal-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .deal-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .deal-description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .fade-in-out {
+            opacity: 0;
+            animation: fadeInOut 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Deals and Coupons</h1>
+    </header>
+
+    <section>
+        <div class="deal-card fade-in-out">
+            <img class="deal-image" src="https://via.placeholder.com/300" alt="Deal Image">
+            <div class="deal-title">50% Off on Electronics</div>
+            <div class="deal-description">Get amazing discounts on a wide range of electronics. Limited time offer!</div>
+        </div>
+
+        <div class="deal-card fade-in-out">
+            <img class="deal-image" src="https://via.placeholder.com/300" alt="Deal Image">
+            <div class="deal-title">Free Shipping on Fashion</div>
+            <div class="deal-description">Shop the latest fashion trends and enjoy free shipping on all orders.</div>
+        </div>
+
+        <!-- Add more deal cards as needed -->
+
+    </section>
+
+    <script>
+        // Trigger fade-in-out animation when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            var fadeElements = document.querySelectorAll('.fade-in-out');
+            fadeElements.forEach(function (element) {
+                element.style.opacity = 1;
+            });
+        });
+    </script>
+
+</body>
+</html>
